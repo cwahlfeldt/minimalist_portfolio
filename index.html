@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chris Wahlfeldt</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/lumen/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>
+    $(function () {
+      $('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 500);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+  <style>
+    #about,
+    #code,
+    #art {
+      height: 100%;
+    }
+    #contact {
+      height: 94%;
+    }
+    .special,
+    .special .jumbotron {
+      height: 100%;
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="top">
+    <!--main nav bar setup using bootstrap-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#top">Chris Wahlfeldt</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">About</a>
+            </li>
+            <li><a href="#code">Code</a>
+            </li>
+            <li><a href="#art">Art</a>
+            </li>
+            <li><a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <!--end of nav-->
+
+    <!--3d script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.js"></script>
+    <script>
+      var size = 2;
+      var scene = new THREE.Scene();
+      var aspect = window.innerWidth / (window.innerHeight);
+      var camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 10000);
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize((window.innerWidth), (window.innerHeight));
+      document.body.appendChild(renderer.domElement);
+
+      var geometry = new THREE.BoxGeometry(size, size, size);
+      var material = new THREE.MeshNormalMaterial();
+      var cube = new THREE.Mesh(geometry, material);
+      var light = new THREE.AmbientLight(0x404040);
+      scene.add(light);
+      scene.add(cube);
+      camera.position.z = 6;
+
+      var render = function () {
+        requestAnimationFrame(render);
+        cube.rotation.x += 0.025;
+        cube.rotation.y += 0.025;
+        renderer.render(scene, camera);
+      };
+
+      render();
+    </script>
+    <!--end of 3d script-->
+  </div>
+
+  <div id="about">
+    <div class="jumbotron special">
+      <div id="wrapper">
+        <div class="container">
+          <div class="page-header">
+            <h1>About</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="code">
+    <div class="jumbotron special">
+      <div class="container">
+        <div class="page-header">
+          <h1>Code</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium vel dolor ex cupiditate aut culpa molestiae nihil, vitae, obcaecati sint inventore est qui at distinctio cum repellendus delectus, expedita temporibus!</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="art">
+    <div class="jumbotron special">
+      <div class="container">
+        <div class="page-header">
+          <h1>Art</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium vel dolor ex cupiditate aut culpa molestiae nihil, vitae, obcaecati sint inventore est qui at distinctio cum repellendus delectus, expedita temporibus!</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="jumbotron special">
+      <div class="container">
+        <div class="page-header">
+          <h1>Contact</h1>
+        </div>
+        <form class="form-horizontal" role="form" method="post" action="index.php">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="name" name="name" placeholder="name" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="email" name="email" placeholder="email" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <textarea class="form-control" rows="16" name="message" placeholder="write me a message"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <button class="btn btn-success" href="#">Submit</button>
+              <button class="btn btn-warning" href="#">Clear</button>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <! Will be used to display an alert to the user>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+
+    <p>&copy; Company | Privacy | Terms</p>
+
+  </div>
+  <!--Includes-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
