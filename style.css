@@ -1,0 +1,33 @@
+/* this is my stylesheet to change basic layout stuff*/
+
+#about,
+#code,
+#art {
+	height: 100%;
+}
+#contact {
+	height: 94%;
+}
+.special,
+.special .jumbotron {
+	height: 100%;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	overflow: hidden;
+}
+.blue {
+	background-color: #69D2E7 !important;
+}
+.offwhite {
+	background-color: #E0E4CC !important;
+}
+.orange {
+	background-color: #F38630 !important;
+}
+.lightblue {
+	background-color: #A7DBD8 !important;
+}

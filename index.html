@@ -2,198 +2,194 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Chris Wahlfeldt</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/lumen/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script>
-    $(function () {
-      $('a[href*=#]:not([href=#])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	<meta charset="UTF-8">
+	<title>Chris Wahlfeldt</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/lumen/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script>
+		$(function () {
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 500);
-            return false;
-          }
-        }
-      });
-    });
-  </script>
-  <style>
-    #about,
-    #code,
-    #art {
-      height: 100%;
-    }
-    #contact {
-      height: 94%;
-    }
-    .special,
-    .special .jumbotron {
-      height: 100%;
-    }
-    html {
-      height: 100%;
-    }
-    body {
-      height: 100%;
-      overflow: hidden;
-    }
-  </style>
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 500);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
 
-  <div id="top">
-    <!--main nav bar setup using bootstrap-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#top">Chris Wahlfeldt</a>
-        </div>
+	<div id="top">
+		<!--main nav bar setup using bootstrap-->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about">About</a>
-            </li>
-            <li><a href="#code">Code</a>
-            </li>
-            <li><a href="#art">Art</a>
-            </li>
-            <li><a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-    <!--end of nav-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#top">Chris Wahlfeldt</a>
+				</div>
 
-    <!--3d script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.js"></script>
-    <script>
-      var size = 2;
-      var scene = new THREE.Scene();
-      var aspect = window.innerWidth / (window.innerHeight);
-      var camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 10000);
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize((window.innerWidth), (window.innerHeight));
-      document.body.appendChild(renderer.domElement);
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">About</a>
+						</li>
+						<li><a href="#code">Code</a>
+						</li>
+						<li><a href="#art">Art</a>
+						</li>
+						<li><a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!--end of nav-->
 
-      var geometry = new THREE.BoxGeometry(size, size, size);
-      var material = new THREE.MeshNormalMaterial();
-      var cube = new THREE.Mesh(geometry, material);
-      var light = new THREE.AmbientLight(0x404040);
-      scene.add(light);
-      scene.add(cube);
-      camera.position.z = 6;
+		<!--3d script-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.js"></script>
+		<script>
+			var size = 2;
+			var scene = new THREE.Scene();
+			var aspect = window.innerWidth / (window.innerHeight);
+			var camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 10000);
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize((window.innerWidth), (window.innerHeight));
+			document.body.appendChild(renderer.domElement);
 
-      var render = function () {
-        requestAnimationFrame(render);
-        cube.rotation.x += 0.025;
-        cube.rotation.y += 0.025;
-        renderer.render(scene, camera);
-      };
+			var geometry = new THREE.BoxGeometry(size, size, size);
+			var material = new THREE.MeshNormalMaterial();
+			var cube = new THREE.Mesh(geometry, material);
+			var light = new THREE.AmbientLight(0x404040);
+			scene.add(light);
+			scene.add(cube);
+			camera.position.z = 6;
 
-      render();
-    </script>
-    <!--end of 3d script-->
-  </div>
+			var render = function () {
+				requestAnimationFrame(render);
+				cube.rotation.x += 0.025;
+				cube.rotation.y += 0.025;
+				renderer.render(scene, camera);
+			};
 
-  <div id="about">
-    <div class="jumbotron special">
-      <div id="wrapper">
-        <div class="container">
-          <div class="page-header">
-            <h1>About</h1>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur!</p>
-        </div>
-      </div>
-    </div>
-  </div>
+			render();
+		</script>
+		<!--end of 3d script-->
+	</div>
 
-  <div id="code">
-    <div class="jumbotron special">
-      <div class="container">
-        <div class="page-header">
-          <h1>Code</h1>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium vel dolor ex cupiditate aut culpa molestiae nihil, vitae, obcaecati sint inventore est qui at distinctio cum repellendus delectus, expedita temporibus!</p>
-      </div>
-    </div>
-  </div>
+	<div id="about">
+		<div class="jumbotron special blue">
+			<div id="wrapper">
+				<div class="container">
+					<div class="page-header">
+						<h1>About</h1>
+					</div>
+					<div id="content" class="row">
+						<div class=".col-xs-6 .col-md-4">
+							<img style="max-width:170px; padding-right: 20px" class="pull-left img-circle" src="images/chris_jump.jpg" alt=""></img>
+						</div>
+						<div class=".col-xs-12 .col-sm-6 .col-md-8">
+							<p>My name is Chris Wahlfeldt. I’m a 3D artist and aspiring programmer based out of Champaign-Urbana Illinois. I’m passionate about all things computers but I sway towards Game/Web Development.</p>
 
-  <div id="art">
-    <div class="jumbotron special">
-      <div class="container">
-        <div class="page-header">
-          <h1>Art</h1>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium vel dolor ex cupiditate aut culpa molestiae nihil, vitae, obcaecati sint inventore est qui at distinctio cum repellendus delectus, expedita temporibus!</p>
-      </div>
-    </div>
-  </div>
+							<p>Other than my love computers, I am a spirited musician that loves playing shows. Before going to school and earning an associates degree in Digital Media, I was in multiple bands that toured across the country. Playing music and touring has given me a better understanding of the world and the people inhabiting it. It also introduced me to some of the best people I know and love.</p>
 
-  <div id="contact">
-    <div class="jumbotron special">
-      <div class="container">
-        <div class="page-header">
-          <h1>Contact</h1>
-        </div>
-        <form class="form-horizontal" role="form" method="post" action="index.php">
-          <div class="form-group">
-            <div class="col-sm-12">
-              <input type="text" class="form-control" id="name" name="name" placeholder="name" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-12">
-              <input type="email" class="form-control" id="email" name="email" placeholder="email" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-12">
-              <textarea class="form-control" rows="16" name="message" placeholder="write me a message"></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-10">
-              <button class="btn btn-success" href="#">Submit</button>
-              <button class="btn btn-warning" href="#">Clear</button>
+							<p>I am currently working as a server at Blackdog Smoke and ale house for which I also created the website. I’m constantly keeping my self busy with side projects as well as taking courses for a computer science degree.</p>
+							<p>Download my resume.</p>
+						</div>
+						<button class="btn btn-lg btn-primary">Resume</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-10">
-              <! Will be used to display an alert to the user>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="panel-footer">
+	<div id="code">
+		<div class="jumbotron special offwhite">
+			<div class="container">
+				<div class="page-header">
+					<h1>Code</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus maxime, vel iure, soluta asperiores numquam quia iusto! Ipsam consectetur facere porro dolore pariatur, nisi beatae quaerat corporis expedita praesentium voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, tempora similique. Consequatur temporibus facilis suscipit fuga, dignissimos hic cupiditate. Corporis obcaecati expedita error facilis ipsam dolor repellendus illo non! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse soluta maxime aliquid ipsum, omnis quos. Odit tempore numquam quos eum, aliquid ullam quibusdam perspiciatis saepe deleniti earum possimus quasi dolorem!</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <p>&copy; Company | Privacy | Terms</p>
+	<div id="art">
+		<div class="jumbotron special lightblue">
+			<div class="container">
+				<div class="page-header">
+					<h1>Art</h1>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores libero fugit beatae vero, voluptatibus quod. Nostrum, exercitationem vitae cupiditate atque quae et, sit, quos hic neque tempore natus beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore necessitatibus excepturi animi, aspernatur culpa earum ipsam esse. Non libero suscipit magnam quo deserunt sequi minima modi, qui dolorum odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus nam facere, doloremque consectetur cumque enim distinctio neque quae quo saepe eum molestias laboriosam incidunt totam commodi tenetur numquam pariatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium vel dolor ex cupiditate aut culpa molestiae nihil, vitae, obcaecati sint inventore est qui at distinctio cum repellendus delectus, expedita temporibus!</p>
+			</div>
+		</div>
+	</div>
 
-  </div>
-  <!--Includes-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<div id="contact">
+		<div class="jumbotron special orange">
+			<div class="container">
+				<div class="page-header">
+					<h1>Contact</h1>
+				</div>
+				<form class="form-horizontal" role="form" method="post" action="index.php">
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" id="name" name="name" placeholder="name" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="email" class="form-control" id="email" name="email" placeholder="email" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<textarea class="form-control" rows="16" name="message" placeholder="write me a message"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<button class="btn btn-success">Submit</button>
+							<button class="btn btn-danger">Clear</button>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<! Will be used to display an alert to the user>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel-footer">
+
+		<p>&copy; kastr | chriswahlfeldt@gmail.com | All Rights Reserved</p>
+
+	</div>
+	
+	<!--Includes-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
