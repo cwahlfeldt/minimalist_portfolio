@@ -1,33 +1,52 @@
 /* this is my stylesheet to change basic layout stuff*/
 
+html {
+	height: 100vh;
+}
+body {
+	height: 100vh;
+	overflow: auto;
+}
 #about,
 #code,
 #art {
-	height: 100%;
+	min-height: 100vh;
 }
 #contact {
-	height: 94%;
+	min-height: 100vh;
 }
 .special,
 .special .jumbotron {
-	height: 100%;
+	min-height: 100vh;
 }
-html {
-	height: 100%;
+.special-contact,
+.special-contact .jumbotron {
+	min-height: 94vh;
 }
-body {
-	height: 100%;
-	overflow: hidden;
+.jumbotron {
+	margin-bottom: 0px !important;
+	border: none;
 }
-.blue {
-	background-color: #69D2E7 !important;
+.one {
+	background-color: #DB3B2B !important;
+	color: #EFF6FD;
 }
-.offwhite {
-	background-color: #E0E4CC !important;
+.two {
+	background-color: #B5D4A0 !important;
 }
-.orange {
-	background-color: #F38630 !important;
+.three {
+	background-color: #0085A3 !important;
+	color: #EFF6FD;
 }
-.lightblue {
-	background-color: #A7DBD8 !important;
+.four {
+	background-color: #EFF6FD !important;
+}
+#code .page-header,
+#contact .page-header {
+	border-bottom-color: #555555;
+}
+.col-bro {
+	margin-top: 55px;
+	max-width: 280px;
+	box-shadow: 1px 1px 1px #344;
 }
