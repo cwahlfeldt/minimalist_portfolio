@@ -2,241 +2,295 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
 
-	<title>Chris Wahlfeldt</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/lumen/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.js"></script>
-	<script>
-		$(function () {
-			$('a[href*=#]:not([href=#])').click(function () {
-				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  <title>Chris Wahlfeldt</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.js"></script>
+  <script>
+    $(function () {
+      $('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 
-					var target = $(this.hash);
-					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-					if (target.length) {
-						$('html,body').animate({
-							scrollTop: target.offset().top
-						}, 500);
-						return false;
-					}
-				}
-			});
-		});
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 500);
+            return false;
+          }
+        }
+      });
+    });
 
-		jQuery(function ($) {
-			$('.navbar-default .navbar-nav > li > a').click(function () {
-				$('.navbar-default .navbar-collapse').collapse('hide')
-			});
-		});
-	</script>
+    jQuery(function ($) {
+      $('.navbar-default .navbar-nav > li > a').click(function () {
+        $('.navbar-default .navbar-collapse').collapse('hide')
+      });
+    });
+  </script>
 </head>
 
 <body>
 
-	<div id="top">
-		<!--main nav bar setup using bootstrap-->
+  <div id="top">
+    <!--main nav bar setup using bootstrap-->
 
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#top">Brand</a>
-				</div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#top">Chris Wahlfeldt</a>
+        </div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="#about">About</a>
-						</li>
-						<li><a href="#code">Code</a>
-						</li>
-						<li><a href="#art">Art</a>
-						</li>
-						<li><a href="#contact">Contact</a>
-						</li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container-fluid -->
-		</nav>
-		<!--end of nav-->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#about">About</a>
+            </li>
+            <li><a href="#code">Code</a>
+            </li>
+            <li><a href="#art">Art</a>
+            </li>
+            <li><a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <!--end of nav-->
 
-		<!--3d script-->
-		<script src="threed.js"></script>
-		<!--end of 3d script-->
-		
-	</div>
+    <!--3d script-->
+    <script src="threed.js"></script>
+    <!--end of 3d script-->
 
-	<div id="about">
-		<div class="jumbotron special one">
-			<div id="wrapper">
-				<div class="container">
-					<div class="page-header">
-						<h1>About</h1>
-					</div>
-					<div id="content" class="row">
-						<div class=".col-xs-6 .col-md-4">
-							<img style="max-width:170px; padding-right: 20px" class="pull-left img-circle" src="images/chris_jump.jpg" alt=""></img>
-						</div>
-						<div class=".col-xs-12 .col-sm-6 .col-md-8">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit molestias sunt perferendis quod aliquam! Hic dolore dignissimos dolores illo velit officiis magni optio, adipisci voluptatem autem at minima, eius harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam quidem tempora qui accusantium possimus accusamus aut excepturi fuga consequatur, reiciendis quam ut laborum nostrum, quas cumque veniam voluptate. Deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa assumenda eum molestiae perspiciatis minus delectus incidunt molestias deserunt. Nemo adipisci illum veniam vitae, pariatur cupiditate. Recusandae, beatae eaque in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde id tempora nobis earum libero velit molestiae sit ut debitis. Eum fugiat vero eos, adipisci quaerat placeat suscipit possimus sint assumenda!</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit molestias sunt perferendis quod aliquam! Hic dolore dignissimos dolores illo velit officiis magni optio, adipisci voluptatem autem at minima, eius harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam quidem tempora qui accusantium possimus accusamus aut excepturi fuga consequatur, reiciendis quam ut laborum nostrum, quas cumque veniam voluptate. Deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa assumenda eum molestiae perspiciatis minus delectus incidunt molestias deserunt. Nemo adipisci illum veniam vitae, pariatur cupiditate.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat alias nam, accusantium ipsum modi aliquam commodi nesciunt facilis, labore maxime temporibus distinctio a perferendis vero numquam dolor. Sapiente, consequuntur, harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam et explicabo voluptas, autem quaerat sunt, modi aspernatur adipisci esse culpa incidunt tempore veritatis quasi ullam unde doloribus rerum deleniti neque!</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat itaque veritatis, in ut iure modi reiciendis velit cumque. Quam ullam enim excepturi consequuntur ad commodi, itaque dolor doloribus, voluptate.</p>
-						</div>
-						<button class="btn btn-lg btn-primary">Resume</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  </div>
 
-	<div id="code">
-		<div class="jumbotron special two">
-			<div class="container">
-				<div class="page-header">
-					<h1>Code</h1>
-				</div>
-				<div class="row-fluid text-center">
-					<div class="col-sm-4">
-						<a href="#code">
-							<img class="col-bro img-rounded" src="images/code-holder1.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#code">
-							<img class="col-bro img-rounded" src="images/code-holder2.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#code">
-							<img class="col-bro img-rounded" src="images/code-holder3.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="row-fluid text-center">
-					<div class="col-sm-4">
-						<a href="#code">
-							<img class="col-bro img-rounded" src="images/code-holder4.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#code">
-							<img class="col-bro img-rounded" src="images/code-holder5.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#code">
-							<img class="col-bro img-rounded" src="images/code-holder6.png" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div id="about">
+    <div class="jumbotron special one">
+      <div id="wrapper">
+        <div class="container">
+          <div class="page-header">
+            <h1>About</h1>
+          </div>
+          <div id="content">
 
-	<div id="art">
-		<div class="jumbotron special three">
-			<div class="container">
-				<div class="page-header">
-					<h1>Art</h1>
-				</div>
-				<div class="row-fluid text-center">
-					<div class="col-sm-4">
-						<a href="#art">
-							<img class="col-bro img-rounded" src="images/holder1.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#art">
-							<img class="col-bro img-rounded" src="images/holder2.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#art">
-							<img class="col-bro img-rounded" src="images/holder3.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="row-fluid text-center">
-					<div class="col-sm-4">
-						<a href="#art">
-							<img class="col-bro img-rounded" src="images/holder4.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#art">
-							<img class="col-bro img-rounded" src="images/holder5.png" alt="">
-						</a>
-					</div>
-					<div class="col-sm-4">
-						<a href="#art">
-							<img class="col-bro img-rounded" src="images/holder6.png" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <img style="max-width:170px; padding-right: 20px" class="pull-left img-circle" src="images/chris_jump.jpg" alt=""></img>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit molestias sunt perferendis quod aliquam! Hic dolore dignissimos dolores illo velit officiis magni optio, adipisci voluptatem autem at minima, eius harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam quidem tempora qui accusantium possimus accusamus aut excepturi fuga consequatur, reiciendis quam ut laborum nostrum, quas cumque veniam voluptate. Deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa assumenda eum molestiae perspiciatis minus delectus incidunt molestias deserunt. Nemo adipisci illum veniam vitae, pariatur cupiditate. Recusandae, beatae eaque in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde id tempora nobis earum libero velit molestiae sit ut debitis. Eum fugiat vero eos, adipisci quaerat placeat suscipit possimus sint assumenda!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit molestias sunt perferendis quod aliquam! Hic dolore dignissimos dolores illo velit officiis magni optio, adipisci voluptatem autem at minima, eius harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam quidem tempora qui accusantium possimus accusamus aut excepturi fuga consequatur, reiciendis quam ut laborum nostrum, quas cumque veniam voluptate. Deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa assumenda eum molestiae perspiciatis minus delectus incidunt molestias deserunt. Nemo adipisci illum veniam vitae, pariatur cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat alias nam, accusantium ipsum modi aliquam commodi nesciunt facilis, labore maxime temporibus distinctio a perferendis vero numquam dolor. Sapiente, consequuntur, harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam et explicabo voluptas, autem quaerat sunt, modi aspernatur adipisci esse culpa incidunt tempore veritatis quasi ullam unde doloribus rerum deleniti neque!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat itaque veritatis, in ut iure modi reiciendis velit cumque. Quam ullam enim excepturi consequuntur ad commodi, itaque dolor doloribus, voluptate.</p>
+            <button class="btn btn-lg btn-primary">Resume</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div id="contact">
-		<div class="jumbotron special-contact four">
-			<div class="container">
-				<div class="page-header">
-					<h1>Contact</h1>
-				</div>
-				<form class="form-horizontal" role="form" method="post" action="index.php">
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" class="form-control" id="name" name="name" placeholder="name" value="">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="email" class="form-control" id="email" name="email" placeholder="email" value="">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-12">
-							<textarea class="form-control" rows="16" name="message" placeholder="write me a message"></textarea>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-10">
-							<button class="btn btn-success">Submit</button>
-							<button class="btn btn-danger">Clear</button>
+  <div id="code">
+    <div class="jumbotron special two">
+      <div class="container">
+        <div class="page-header">
+          <h1>Code</h1>
+        </div>
+        <div class="row-fluid text-center">
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal1">
+              <img class="col-bro img-rounded" src="images/code-holder1.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal1">
+              <img class="col-bro img-rounded" src="images/code-holder2.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal1">
+              <img class="col-bro img-rounded" src="images/code-holder3.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="row-fluid text-center">
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal1">
+              <img class="col-bro img-rounded" src="images/code-holder4.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal1">
+              <img class="col-bro img-rounded" src="images/code-holder5.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal1">
+              <img class="col-bro img-rounded" src="images/code-holder6.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-10">
-							<! Will be used to display an alert to the user>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-		<div class="panel-footer">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Project 1</h4>
+          </div>
+          <div class="modal-body">
 
-			<p>&copy; kastr | Chris Wahlfeldt | All Rights Reserved</p>
+            <img class="modal-image img-responsive pull-right img-rounded" src="images/code-holder1.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <img class="modal-image img-responsive pull-left img-rounded" src="images/code-holder2.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis veniam consectetur tenetur ullam recusandae eligendi, ipsam nesciunt atque delectus modi aut ipsa, deserunt unde, asperiores sequi maxime tempora! Et, architecto.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit mollitia doloribus suscipit beatae adipisci ad, minima quos quaerat aliquam, commodi ipsum, impedit cum assumenda voluptatum provident ab. Ipsum mollitia, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore magnam doloribus non suscipit impedit fuga eos assumenda odio dolor, sunt qui neque quisquam laborum totam cupiditate ipsum quis rem accusamus!</p>
+          </div>
+          <div class="modal-footer" style="clear: both; ">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end modal-->
+  </div>
 
-		</div>
-	</div>
+  <div id="art">
+    <div class="jumbotron special three">
+      <div class="container">
+        <div class="page-header">
+          <h1>Art</h1>
+        </div>
+        <div class="row-fluid text-center">
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal2">
+              <img class="col-bro img-rounded" src="images/holder1.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal2">
+              <img class="col-bro img-rounded" src="images/holder2.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal2">
+              <img class="col-bro img-rounded" src="images/holder3.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="row-fluid text-center">
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal2">
+              <img class="col-bro img-rounded" src="images/holder4.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal2">
+              <img class="col-bro img-rounded" src="images/holder5.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" type="button" data-toggle="modal" data-target="#myModal2">
+              <img class="col-bro img-rounded" src="images/holder6.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Project 1</h4>
+          </div>
+          <div class="modal-body">
 
-	<!--Includes-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+            <img class="modal-image img-responsive pull-right img-rounded" src="images/holder1.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <img class="modal-image img-responsive pull-left img-rounded" src="images/holder2.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, fuga ab minima laudantium architecto fugit ullam veritatis perspiciatis recusandae nisi similique illum deserunt impedit. Quod doloremque libero est, incidunt suscipit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis veniam consectetur tenetur ullam recusandae eligendi, ipsam nesciunt atque delectus modi aut ipsa, deserunt unde, asperiores sequi maxime tempora! Et, architecto.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit mollitia doloribus suscipit beatae adipisci ad, minima quos quaerat aliquam, commodi ipsum, impedit cum assumenda voluptatum provident ab. Ipsum mollitia, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore magnam doloribus non suscipit impedit fuga eos assumenda odio dolor, sunt qui neque quisquam laborum totam cupiditate ipsum quis rem accusamus!</p>
+          </div>
+          <div class="modal-footer" style="clear: both; ">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end modal-->
+  </div>
+
+  <div id="contact">
+    <div class="jumbotron special-contact four">
+      <div class="container">
+        <div class="page-header">
+          <h1>Contact</h1>
+        </div>
+        <form class="form-horizontal" role="form" method="post" action="index.php">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="name" name="name" placeholder="name" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="email" name="email" placeholder="email" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <textarea class="form-control" rows="16" name="message" placeholder="write me a message"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <button class="btn btn-success">Submit</button>
+              <button class="btn btn-danger">Clear</button>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <! Will be used to display an alert to the user>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="panel-footer">
+
+      <p>&copy; kastr | Chris Wahlfeldt | All Rights Reserved</p>
+
+    </div>
+  </div>
+
+  <!--Includes-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
