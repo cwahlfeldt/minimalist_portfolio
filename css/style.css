@@ -62,7 +62,7 @@ body {
 }
 @media only screen and (min-width: 1224px) {
   .col-bro {
-    min-width: 350px;
+    min-width: 330px;
     margin-top: 25px;
     margin-bottom: 15px;
   }

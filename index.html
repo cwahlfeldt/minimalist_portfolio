@@ -65,6 +65,8 @@
 						</li>
 						<li><a href="#contact">Contact</a>
 						</li>
+						<li><a href="#" target="_blank">Blog</a>
+						</li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -87,13 +89,10 @@
 						<h1>About</h1>
 					</div>
 					<div id="content">
-
-						<img style="max-width:170px; padding-right: 20px" class="pull-left img-circle" src="images/chris_jump.jpg" alt=""></img>
+						<img style="margin-right: 20px" class="pull-left img-rounded" src="images/aboutlogo.png" alt=""></img>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit molestias sunt perferendis quod aliquam! Hic dolore dignissimos dolores illo velit officiis magni optio, adipisci voluptatem autem at minima, eius harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam quidem tempora qui accusantium possimus accusamus aut excepturi fuga consequatur, reiciendis quam ut laborum nostrum, quas cumque veniam voluptate. Deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa assumenda eum molestiae perspiciatis minus delectus incidunt molestias deserunt. Nemo adipisci illum veniam vitae, pariatur cupiditate. Recusandae, beatae eaque in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde id tempora nobis earum libero velit molestiae sit ut debitis. Eum fugiat vero eos, adipisci quaerat placeat suscipit possimus sint assumenda!</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit molestias sunt perferendis quod aliquam! Hic dolore dignissimos dolores illo velit officiis magni optio, adipisci voluptatem autem at minima, eius harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam quidem tempora qui accusantium possimus accusamus aut excepturi fuga consequatur, reiciendis quam ut laborum nostrum, quas cumque veniam voluptate. Deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa assumenda eum molestiae perspiciatis minus delectus incidunt molestias deserunt. Nemo adipisci illum veniam vitae, pariatur cupiditate.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat alias nam, accusantium ipsum modi aliquam commodi nesciunt facilis, labore maxime temporibus distinctio a perferendis vero numquam dolor. Sapiente, consequuntur, harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam et explicabo voluptas, autem quaerat sunt, modi aspernatur adipisci esse culpa incidunt tempore veritatis quasi ullam unde doloribus rerum deleniti neque!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat itaque veritatis, in ut iure modi reiciendis velit cumque. Quam ullam enim excepturi consequuntur ad commodi, itaque dolor doloribus, voluptate.</p>
-						<button class="btn btn-lg btn-primary">Resume</button>
+						<a type="button" href="#" class="btn btn-lg btn-success">My Resume</a>
 					</div>
 				</div>
 			</div>
@@ -251,7 +250,7 @@
 				<div class="page-header">
 					<h1>Contact</h1>
 				</div>
-				<form class="form-horizontal" role="form" method="post" action="index.php">
+				<form id="myform" class="form-horizontal" role="form" method="post" action="index.php">
 					<div class="form-group">
 						<div class="col-sm-12">
 							<input type="text" class="form-control" id="name" name="name" placeholder="name" value="">
@@ -264,20 +263,12 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<textarea class="form-control" rows="16" name="message" placeholder="write me a message"></textarea>
+							<textarea class="form-control" rows="16" name="message" placeholder="message"></textarea>
 						</div>
 					</div>
-					<div class="form-group">
-						<div class="col-sm-10">
-							<button class="btn btn-success">Submit</button>
-							<button class="btn btn-danger">Clear</button>
-
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-10">
-							<! Will be used to display an alert to the user>
-						</div>
+						<div role="group" class="btn-group btn-group-justified">
+							<a href="javascript:{}" onclick="document.getElementById('myform').submit(); return false;" style="font-size:14px;" type="submit" value="send" class="btn btn-primary btn-lg">send</a>
+							<a href="javascript:{}" onclick="document.getElementById('myform').reset(); return false;" style="font-size:14px;" type="reset" value="Clear" class="btn btn-danger btn-lg">clear</a>
 					</div>
 				</form>
 			</div>
@@ -289,7 +280,6 @@
 		</div>
 	</div>
 
-	<!--Includes-->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 
